@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hw_style.css">
+    <title>HomeWork Register</title>
+</head>
+<body>
+    <h1 align="center">Register Form</h1>  
+    <div class="container">
+        <form>
+            <span class="inline">
+                <label for="txtfname">ชื่อ</label>
+                <input type="text" class="input-border" id="fname" name="txtfname" placeholder="ชื่อจริง">
+            </span>
+
+            <span class="inline" style="float: right;">
+                <label for="txtlname">นามสกุล</label>
+                <input type="text" class="input-border" id="lname" name="txtlname" placeholder="นามสกุล">
+            </span>
+
+            <label for="txtemail">Email</label>
+            <input type="Email" class="input-border" id="email" name="txtemail" placeholder="Email">
+
+            <span class="inline-a">
+                <label for="txtbirthday">Birthday</label>
+                <input type="date" class="input-border" id="bday" name="txtbirthday" style="width: 20%;"> 
+            </span>
+            
+            <span class="inline-a" style="margin-left: 4%;">
+                <label for="gender" >เพศ</label>
+                <input type="radio" name="gender"> ชาย
+                <input type="radio" name="gender"> หญิง
+            </span>
+
+            <span class="inline-a" style="margin-left: 4%;">
+            <label for="country">ประเทศที่ชอบ : </label>
+            <input type="checkbox" name="country"> ไทย
+            <input type="checkbox" name="country"> ฝรั่งเศษ
+            <input type="checkbox" name="country"> ญี่ปุ่น
+            </span>
+            <br>
+
+            <span class="inline">
+            <label for="txtweight">น้ำหนัก</label>
+            <input type="number" class="input-border" id="email" name="txtweight" placeholder="น้ำหนัก" >
+            </span>
+
+            <span class="inline"  style="float: right;">
+            <label for="txtheight">ส่วนสูง</label>
+            <input type="number" class="input-border" id="email" name="txtweight" placeholder="ส่วนสูง">
+            </span> <br>
+
+            <label for="txtpwd">รหัสผ่าน</label>
+            <input type="password" class="input-border" id="pwd" name="txtpwd" placeholder="รหัสผ่าน">
+
+            <br>
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*"><br>
+            <img id="blah" src="#" alt="Preview" width="20%" height="30%" />
+
+            <br>
+            <span class="inline-a">
+            <input type="submit" class="button-sub" value="Submit"> 
+            </span> 
+            <span class="inline-a">
+            <input type="reset" class="button-can" value="Cancel">
+            </span>
+        </form>
+    </div>
+
+    <script>
+    img.onchange = evt => {
+        const [file] = img.files
+        if (file) {
+          blah.src = URL.createObjectURL(file)
+        }
+      }
+    </script>
+</body>
+</html>
